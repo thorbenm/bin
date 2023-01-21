@@ -1,0 +1,4 @@
+#!/bin/bash
+
+crontab -l > /home/pi/crontab_backups/$(date +"%Y-%m-%d.txt")
+cmp --silent /home/pi/crontab_backups/$(ls /home/pi/crontab_backups/ | tail -2 | head -1) /home/pi/crontab_backups/$(ls crontab_backups/ | tail -1) && rm -rf /home/pi/crontab_backups/$(ls crontab_backups/ | tail -1)
