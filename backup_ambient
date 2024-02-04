@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat ambient.log > "/home/pi/ambient_logs/$(date +'%Y-%m-%d').txt"
